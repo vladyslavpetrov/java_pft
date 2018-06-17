@@ -13,15 +13,6 @@ public class ApplicationManager {
     private GroupHelper groupHelper;
     private SessionHelper sessionHelper;
 
-    public static boolean isAlertPresent(FirefoxDriver wd) {
-        try {
-            wd.switchTo().alert();
-            return true;
-        } catch (NoAlertPresentException e) {
-            return false;
-        }
-    }
-
     public void init() {
         System.setProperty("webdriver.gecko.driver", "/Users/vladpetrov/Documents/geckodriver");
         wd = new FirefoxDriver();
