@@ -29,4 +29,8 @@ public class ContactsHelper extends HelperBase{
     public void updateForm() {
         click(By.name("update"));
     }
+
+    public void deleteContact() {
+        click(By.cssSelector("input[value='Delete']"));
+    }
 }
