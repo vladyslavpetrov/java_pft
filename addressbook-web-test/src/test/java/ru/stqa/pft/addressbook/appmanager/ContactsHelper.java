@@ -21,4 +21,12 @@ public class ContactsHelper extends HelperBase{
     public void submitContactsForm(){
         click(By.name("submit"));
     }
+
+    public void editContact() {
+        click(By.cssSelector("img[title='Edit']"));
+    }
+
+    public void updateForm() {
+        click(By.name("update"));
+    }
 }
