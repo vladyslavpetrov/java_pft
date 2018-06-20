@@ -1,7 +1,5 @@
 package ru.stqa.pft.addressbook.appmanager;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.util.concurrent.TimeUnit;
@@ -12,6 +10,7 @@ public class ApplicationManager {
     private NavigationHelper navigationHelper;
     private GroupHelper groupHelper;
     private SessionHelper sessionHelper;
+    private ContactsHelper contactsHelper;
 
     public void init() {
         System.setProperty("webdriver.gecko.driver", "/Users/vladpetrov/Documents/geckodriver");
@@ -21,6 +20,7 @@ public class ApplicationManager {
         groupHelper = new GroupHelper(wd);
         navigationHelper = new NavigationHelper(wd);
         sessionHelper = new SessionHelper(wd);
+        contactsHelper = new ContactsHelper(wd);
         sessionHelper.login("admin", "secret");
     }
 
@@ -35,4 +35,6 @@ public class ApplicationManager {
     public NavigationHelper getNavigationHelper() {
         return navigationHelper;
     }
+
+    public ContactsHelper getContactsHelper() { return contactsHelper; }
 }
