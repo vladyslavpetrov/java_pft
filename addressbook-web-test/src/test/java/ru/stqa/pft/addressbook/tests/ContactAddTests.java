@@ -9,7 +9,7 @@ public class ContactAddTests extends TestBase{
     public void testAddNewContact() throws InterruptedException {
         app.getNavigationHelper().goToAddContactPage();
         app.getContactsHelper().fillContactsForm(new ContactsData("Vlad", "Sergeevich",
-                "Petrov", "vladp", "380936835804", "retqqqq@gmail.com"));
+                "Petrov", "vladp", "380936835804", "retqqqq@gmail.com", "test1"), true);
         app.getContactsHelper().submitContactsForm();
     }
 }
