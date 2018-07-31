@@ -43,4 +43,13 @@ public class ContactsHelper extends HelperBase{
     public void deleteContact() {
         click(By.cssSelector("input[value='Delete']"));
     }
+
+    public void createContact(ContactsData contactsData, boolean b) {
+        fillContactsForm(contactsData, b);
+        submitContactsForm();
+    }
+
+    public boolean isThereAContact() {
+        return isElementPresent(By.cssSelector("img[title='Edit']"));
+    }
 }
